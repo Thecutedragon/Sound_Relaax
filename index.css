@@ -1,0 +1,42 @@
+/*Font for the sign in and log in buttons  */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Luxurious+Roman&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: rgb(255,247,0);
+    background: linear-gradient(153deg, rgba(255,247,0,1) 9%, rgba(0,255,187,1) 54%) fixed; 
+}
+
+/* Header */
+.Headerstyle_container{
+    box-shadow: rgb(0 0 0 /10%) 0px 2px 8px;
+    font-size: 1em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.in-ut{
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+}
+.sign-in{
+    padding: 5px 25px;
+    text-decoration: none;
+    border: none;
+    background-color: aliceblue;
+    color: rgb(0, 0, 0);
+    font-family: 'Cinzel', serif;
+    font-family: 'Luxurious Roman', cursive;
+    font-size: 17px;
+
+}
+
+
+/* Into and paragraph */
+.Intro{
+    margin: 10px;
+}
