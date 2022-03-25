@@ -87,12 +87,27 @@ body{
     justify-content: center;
 }
 
+.forest:hover{
+    color: white;
+}
+
 .forest {
     letter-spacing: -1.5rem;
 }
 .forest i:nth-child(odd) {
     font-size: 2.5rem;
 }
+
+.fa-4x:hover{
+    color: white;
+}
+
+
+
+
+
+
+
 
 footer{
     align-items: flex-end;
