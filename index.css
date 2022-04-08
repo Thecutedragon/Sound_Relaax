@@ -7,7 +7,8 @@
 
 body{
     background: rgb(255,247,0);
-    background: linear-gradient(153deg, rgba(255,247,0,1) 9%, rgba(0,255,187,1) 54%) fixed; 
+    background: linear-gradient(153deg, rgba(255,247,0,1) 9%, rgba(0,255,187,1) 54%) fixed;
+    position: relative;
 }
 
 /* Header */
@@ -102,12 +103,27 @@ body{
     color: white;
 }
 
+.login{
+    display: flex;
+    /* align-self: center; */
+    width: 50vw;
+    top: 20vh;
+    left: 20vw;
+    height: 50vh;
+    position: absolute;
+    background-color: red;
+}
 
 
+.login input[type=text] {
+    width: 50%;
+    height: 5%;
+}
 
-
-
-
+.username{
+    font-size: 1.5em;
+    order: -1;
+}
 
 footer{
     align-items: flex-end;

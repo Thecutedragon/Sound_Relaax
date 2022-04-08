@@ -59,3 +59,42 @@ leafPlay.addEventListener(`click`, () => {
     if(leafAudio) return leafAudio.play();
     leafAudio.pause();
 })
+
+
+// Email check
+function checkEmail(myForm) {
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(myForm.email.value)){
+    return (true)
+    } // I cant fuly under stand this code but was the best i could find
+    alert("Du har angivit en ogiltig epostadress. Kontrollera den angivna adressen!")
+    return (false)
+    }
+
+
+// Sign upp check
+
+var signIn = document.getElementById("log-in");
+signIn.addEventListener(`click`, () => {
+    let form = document.createElement("div");
+    var Email1 = document.createElement("p");
+    Email1.classList.add("username");
+    let text = document.createTextNode("Email:");
+    Email1.append(text);
+    form.classList.add("login");
+    var input = document.createElement("input");
+    input.type = "text";
+    form.appendChild(input);
+    document.body.append(form)
+    form.append(Email1);
+
+})
+
+
+
+function openForm(){
+    document.getElementById("log-in").style.display = "block";
+}
+
+function closeForm(){
+    document.getElementById("log-in").style.display = "none";
+}
