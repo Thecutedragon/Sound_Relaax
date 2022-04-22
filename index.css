@@ -105,26 +105,31 @@ body{
 
 .login{
     display: flex;
-    /* align-self: center; */
     width: 50vw;
     top: 20vh;
     left: 20vw;
     height: 50vh;
     position: absolute;
     background-color: red;
+    flex-direction: column;
 }
 
 
 .login input[type=text] {
     width: 50%;
-    height: 5%;
 }
 
-.username{
+.font{
     font-size: 1.5em;
     order: -1;
 }
 
 footer{
     align-items: flex-end;
+}
+
+.collum{
+    padding-top: 22px;
+    display: flex;
+    flex-direction: row;
 }
