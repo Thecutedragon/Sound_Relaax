@@ -110,7 +110,7 @@ body{
     left: 20vw;
     height: 50vh;
     position: absolute;
-    background-color: red;
+    background: linear-gradient(153deg, rgb(255, 255, 255) 50%, rgb(71, 71, 71) 10%) fixed;
     flex-direction: column;
 }
 
