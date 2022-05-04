@@ -79,13 +79,16 @@ body{
 
 .Sound_container{
     display: flex;
-    max-width: 50%;
+    max-width: 70%;
     width: 100%;
     justify-content: space-around;
 }
 .Mega-sound-container{
     display: flex;
     justify-content: center;
+    padding-top: 20em;
+    padding-bottom: 5em;
+
 }
 
 .forest:hover{

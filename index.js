@@ -75,52 +75,27 @@ function checkEmail(myForm) {
 // Sign upp check
 
 const signIn = document.getElementById("sign-in");
-signIn.addEventListener(`click`, () => {
-    // let form = document.createElement("div");
-    // var Email1 = document.createElement("p");
-    // Email1.classList.add("font");
-    // let email1 = document.createTextNode("Email:");
-    // form.classList.add("login");
-    // var input = document.createElement("input");
-    // input.type = "text";
-    // var collum1 = document.createElement("div")
-    // collum1.classList.add("collum")
-    // var collum2 = document.createElement("div")
-    // collum2.classList.add("collum")
-    // var password1 = document.createElement("p")
-    // password1.classList.add("font")
-    // let pass = document.createTextNode("Password:")
-    // var input2 = document.createElement("input");
-    // input2.type = "text";
-    // collum1.append(input);
-    // collum1.append(Email1);
-    // form.append(collum1);
-    // password1.append(pass)
-    // Email1.append(email1);
-    // collum2.append(input2)
-    // collum2.append(password1)
-    // form.append(collum2)
-    // document.body.append(form)
+signIn.addEventListener(`click`, openForm1)
 
 
-    const form = document.createElement('form');
-    form.classList.add('login');
-    form.innerHTML = `
-    <div class="collum">
-        <p class="font">Email:</p> <input type="email"></input>
-    </div>
-    <div class="collum">
-        <p class="font">Password:</p>  <input type="password"></input>
-    </div>
-    `;
-    document.body.appendChild(form);
-})
+const logIn = document.getElementById("log-in");
+logIn.addEventListener(`click`,  openForm2)
 
 
-function openForm(){
-    document.getElementById("log-in").style.display = "block";
+function openForm1(){
+    form = document.getElementById("form1");
+    if(form.style.display === "flex"){
+        form.style.display = "none";
+    }else{
+        form.style.display = "flex"
+    }
 }
 
-function closeForm(){
-    document.getElementById("log-in").style.display = "none";
+function openForm2(){
+    form = document.getElementById("form2");
+    if(form.style.display === "flex"){
+        form.style.display = "none";
+    }else{
+        form.style.display = "flex"
+    }
 }
