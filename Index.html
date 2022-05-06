@@ -23,7 +23,23 @@
     </section>
     <article class="Mega-sound-container"> <!--images for the sounds-->
         <div class="Sound_container">
-            <i class="fas fa-cloud-showers-heavy fa-4x" id="rain"></i> 
+            <div class="slider-cont">
+                <i class="fas fa-cloud-showers-heavy fa-4x" id="rain"></i> 
+                <div class="slider">
+                  <input type="range" min="0" max="100" value="50">
+                  <progress min="0" max="100" value="50"></progress>
+                </div>
+                <div class="sliderValue"></div>
+                <script>
+                    window.onload = function(){
+                      slider = document.querySelector(".slider input");
+                      slider.oninput = function(){
+                        progressBar = document.querySelector(".slider progress");
+                        progressBar.value = slider.value; 
+                      }
+                    }
+                  </script>
+            </div>
             <div class="forest" id="forest" > 
                 <i class="fas fa-tree fa-4x"></i> 
                 <i class="fas fa-tree fa-4x"></i> 

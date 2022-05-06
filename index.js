@@ -1,3 +1,5 @@
+
+
 const sound_folder = "sound/";
 //New audio
 const forestAudio = new Audio(`${sound_folder}forest.wav`);
@@ -28,9 +30,9 @@ forestPlay.addEventListener('click', () => {
 const windPlay = document.getElementById("wind");
 
 windPlay.addEventListener(`click`, () =>{
-        if(windAudio.paused) return windAudio.play();
-        windAudio.pause();
-    });
+    if(windAudio.paused) return windAudio.play();
+    windAudio.pause();
+});
 
 const rainPlay = document.getElementById(`rain`);
 
@@ -59,6 +61,20 @@ leafPlay.addEventListener(`click`, () => {
     if(leafAudio) return leafAudio.play();
     leafAudio.pause();
 })
+//slider
+// $("#volume").slider({
+//     min: 0,
+//     max: 100,
+//     value: 0,
+//     range: "min",
+//     slide: function(event, ui){
+//         setVolume(ui.value / 100)
+//     }
+// });
+
+
+//volume
+
 
 
 // Email check
@@ -67,7 +83,7 @@ function checkEmail(myForm) {
         return true;
     } // I cant fully under stand this code but was the best i could find
     alert("Du har angivit en ogiltig epostadress. Kontrollera den angivna adressen!");
-
+    
     return false;
 }
 
@@ -99,3 +115,11 @@ function openForm2(){
         form.style.display = "flex"
     }
 }
+
+
+
+
+
+
+
+
