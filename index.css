@@ -152,15 +152,16 @@ footer{
 }
 .slider{
     position: relative;
-    width: 190px;
+    width: 100px;
     height: 8px;
     top: 10px;
+    justify-content: center;
 }
 .slider input[type="range"]{
     position: absolute;
     left: -2px;
     top: 0;
-    width: 204px;
+    width: 104px;
     height: 8px;
     -webkit-appearance: none;
     background: transparent;
@@ -182,7 +183,7 @@ footer{
 }
 
 .slider progress{
-    width: 200px;
+    width: 100px;
     height: 8px;
     -webkit-appearance: none;
     position: absolute;
@@ -196,10 +197,53 @@ footer{
 .slider progress::-webkit-progress-value{
     background: rgb(0, 0, 0);
 }
-.sliderValue{
-    font-family: "Google Sans Regular";
-    width: 28px;
-    height: 20px;
-    margin-left: 10px;
-    text-align: center;
+
+/* progress forest */
+.slider-forest{
+    position: relative;
+    width: 100px;
+    height: 8px;
+    top: 10px;
+    justify-content: center;
 }
+.slider-forest input[type="range"]{
+    position: absolute;
+    left: -2px;
+    top: 0;
+    width: 104px;
+    height: 8px;
+    -webkit-appearance: none;
+    background: transparent;
+    z-index: 99;
+}
+.slider-forest input::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(0, 0, 0);
+    border: 2px solid rgb(0, 0, 0);
+    cursor: pointer;
+    box-shadow: 0 0 0 1px #fff;
+    border-radius: 50%;
+}
+
+.slider-forest input::-webkit-slider-thumb:hover{
+    transform: scale(1.1);
+}
+
+.slider-forest progress{
+    width: 100px;
+    height: 8px;
+    -webkit-appearance: none;
+    position: absolute;
+    top: 0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.slider-forest progress::-webkit-progress-bar{
+    background: #f0f0f0;
+}
+.slider-forest progress::-webkit-progress-value{
+    background: rgb(0, 0, 0);
+}
+

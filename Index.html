@@ -32,23 +32,54 @@
                 <div class="sliderValue"></div>
                 <script>
                     window.onload = function(){
-                      slider = document.querySelector(".slider input");
-                      slider.oninput = function(){
-                        progressBar = document.querySelector(".slider progress");
-                        progressBar.value = slider.value; 
-                      }
+                        slider = document.querySelector(".slider input");
+                        slider.oninput = function(){
+                            progressBar = document.querySelector(".slider progress")
+                            progressBar.value = slider.value
+                        }
                     }
-                  </script>
+                </script>
             </div>
-            <div class="forest" id="forest" > 
-                <i class="fas fa-tree fa-4x"></i> 
-                <i class="fas fa-tree fa-4x"></i> 
-                <i class="fas fa-tree fa-4x"></i>
+            <div class="slider-cont">
+                <div class="forest" id="forest" > 
+                    <i class="fas fa-tree fa-4x"></i> 
+                    <i class="fas fa-tree fa-4x"></i> 
+                    <i class="fas fa-tree fa-4x"></i>
+                </div>
+                <div class="slider-forest">
+                    <input type="range" min="0" max="100" value="50">
+                    <progress min="0" max="100" value="50"></progress>
+                </div>
+                <div class="sliderValue"></div>
+                <script>
+                    window.onload = function(){
+                        slider = document.querySelector(".slider-forest input");
+                        slider.oninput = function(){
+                            progressBar = document.querySelector(".slider-forest progress")
+                            progressBar.value = slider.value
+                        }
+                    }
+                </script>
             </div>
-            <i class="fas fa-wind fa-4x" id="wind"></i>
+            <div class="slider-cont">
+                <i class="fas fa-wind fa-4x" id="wind"></i>
+                <div class="slider">
+                    <input type="range" min="0" max="100" value="50">
+                    <progress min="0" max="100" value="50"></progress>
+                </div>
+            </div>
             <i class="fas fa-water fa-4x" id="waves"></i> <!---Waves-->
             <i class="fas fa-fire-alt fa-4x" id="fire"></i> <!--Camp fire-->
             <i class="fab fa-envira fa-4x" id="leavsBlowinginWind"></i> <!--leavs-->
+            <script>
+                window.onload = function(){
+                    slider = document.querySelector(".slider input");
+                    slider.oninput = function(){
+                        progressBar = document.querySelector(".slider progress");
+                        progressBar.value = slider.value;
+                    }
+                }
+             </script>
         </div>
     </article> 
     <footer>
