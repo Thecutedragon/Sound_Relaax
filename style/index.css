@@ -11,6 +11,16 @@ body{
     position: relative;
 }
 
+/* img */
+#intro{
+    display: flex;
+    flex-direction: column;
+}
+
+#mainImg{
+    width: 20em;
+    align-self: center;
+}
 /* Header */
 .Headerstyle_container{
     box-shadow: rgb(0 0 0 /10%) 0px 2px 8px;
@@ -106,6 +116,50 @@ body{
     color: white;
 }
 
+.animate{
+    animation:isplaying 5s linear infinite;
+    color: red;
+}
+
+@keyframes isplaying{
+    100%,0%{
+        color: rgb(255,0,0);
+    }
+    8%{
+        color: rgb(255,127,0);
+    }
+    16%{
+        color: rgb(255,255,0);
+    }
+    25%{
+        color: rgb(127,255,0);
+    }
+    33%{
+        color: rgb(0,255,0);
+    }
+    41%{
+        color: rgb(0,255,127);
+    }
+    50%{
+        color: rgb(0,255,255);
+    }
+    58%{
+        color: rgb(0,127,255);
+    }
+    66%{
+        color: rgb(0,0,255);
+    }
+    75%{
+        color: rgb(127,0,255);
+    }
+    83%{
+        color: rgb(255,0,255);
+    }
+    91%{
+        color: rgb(255,0,127);
+    }
+}
+
 .login{
     display: flex;
     width: 50vw;
@@ -198,52 +252,11 @@ footer{
     background: rgb(0, 0, 0);
 }
 
-/* progress forest */
-.slider-forest{
-    position: relative;
-    width: 100px;
-    height: 8px;
-    top: 10px;
-    justify-content: center;
-}
-.slider-forest input[type="range"]{
-    position: absolute;
-    left: -2px;
-    top: 0;
-    width: 104px;
-    height: 8px;
-    -webkit-appearance: none;
-    background: transparent;
-    z-index: 99;
-}
-.slider-forest input::-webkit-slider-thumb{
-    -webkit-appearance: none;
-    width: 20px;
-    height: 20px;
-    background-color: rgb(0, 0, 0);
-    border: 2px solid rgb(0, 0, 0);
-    cursor: pointer;
-    box-shadow: 0 0 0 1px #fff;
-    border-radius: 50%;
+@media screen and (max-width:400px){
+    .Sound_container{
+        flex-direction: column;
+    }
 }
 
-.slider-forest input::-webkit-slider-thumb:hover{
-    transform: scale(1.1);
-}
 
-.slider-forest progress{
-    width: 100px;
-    height: 8px;
-    -webkit-appearance: none;
-    position: absolute;
-    top: 0;
-    border-radius: 5px;
-    overflow: hidden;
-}
-.slider-forest progress::-webkit-progress-bar{
-    background: #f0f0f0;
-}
-.slider-forest progress::-webkit-progress-value{
-    background: rgb(0, 0, 0);
-}
 

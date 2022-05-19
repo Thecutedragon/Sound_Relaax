@@ -23,28 +23,44 @@ leafAudio.loop = true;
 const forestPlay = document.getElementById("forest");
 
 forestPlay.addEventListener('click', () => {
-    if (forestAudio.paused) return forestAudio.play();
+    if (forestAudio.paused) {
+        forestPlay.classList.add('animate');
+        return forestAudio.play();
+    }
+    forestPlay.classList.remove('animate');
     forestAudio.pause();
 });
 
 const windPlay = document.getElementById("wind");
 
 windPlay.addEventListener(`click`, () =>{
-    if(windAudio.paused) return windAudio.play();
+    if(windAudio.paused) {
+        windPlay.classList.add('animate');
+        return windAudio.play();
+    }
+    windPlay.classList.remove('animate');
     windAudio.pause();
 });
 
 const rainPlay = document.getElementById(`rain`);
 
 rainPlay.addEventListener(`click`, () =>{
-    if(rainAudio.paused) return rainAudio.play();
+    if(rainAudio.paused) {
+        rainPlay.classList.add('animate');
+        return rainAudio.play();
+    }
+    rainPlay.classList.remove('animate');
     rainAudio.pause();
 })
 
 const firePlay = document.getElementById(`fire`);
 
 firePlay.addEventListener(`click`, () => {
-    if(fireAudio.paused) return fireAudio.play();
+    if(fireAudio.paused) {
+        firePlay.classList.add('animate');
+        return fireAudio.play();
+    }
+    firePlay.classList.remove('animate');
     fireAudio.pause();
 })
 
