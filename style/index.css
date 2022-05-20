@@ -89,7 +89,7 @@ body{
 
 .Sound_container{
     display: flex;
-    max-width: 70%;
+    max-width: 80%;
     width: 100%;
     justify-content: space-around;
 }
@@ -101,15 +101,17 @@ body{
 
 }
 
-.forest:hover{
-    color: white;
-}
 
 .forest {
     letter-spacing: -1.5rem;
 }
-.forest i:nth-child(odd) {
+.forest ul:nth-child(odd) {
     font-size: 2.5rem;
+}
+
+
+.forest:hover{
+    color: white;
 }
 
 .fa-4x:hover{
@@ -191,8 +193,9 @@ footer{
     flex-direction: row;
 }
 
-
-
+svg{
+    max-height: 50px;
+}
 
 /* slider */
 

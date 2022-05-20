@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.Headerstyle_container{
+    box-shadow: rgb(0 0 0 /10%) 0px 2px 8px;
+    font-size: 1em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.toMain{
+    margin-right: 5px;
+    padding: 5px 20px;
+    text-decoration: none;
+    border: none;
+    background-color: aliceblue;
+    color: rgb(0, 0, 0);
+    font-family: 'Cinzel', serif;
+    font-family: 'Luxurious Roman', cursive;
+    font-size: 17px;
+}
+
+body{
+    background-image: url("../img/headphone.webp");
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: 50% 0%;
+}
+
+@media screen and (max-width:400px) {
+    body{
+        background-size: cover;
+        background-position: 0% 0%;
+    }
+}
+
+
+#help{
+    padding-top: 1em;
+}

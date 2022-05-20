@@ -6,23 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/4b39a549d2.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style/index.css">
+    <link rel="shortcut icon" href="img/note.png" type="image/x-icon" />
     <title>Relaax</title>
 </head>
 <body>
     <header class="Headerstyle_container">
         <h1>Realaax</h1>
+        <a href="Index.html" class="log-in">Main Page</a>
         <form action="" class="in-ut">
             <input type="button" value="log in" class="log-in" id="log-in">
-            <input type="button" value="Sign in" class="sign-in" id="sign-in">
+            <input type="button" value="Sign in" class="log-in" id="sign-in">
         </form>
     </header>
     <main>
         <section class="Intro"> <!--Into with a link to tutoriel-->
-            <h1 class="Tutorial_title">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h1>
+            <h1 class="Tutorial_title">Quick Tutoriel on how to use this site.</h1>
             <div id="intro">
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat delectus quasi a fuga aspernatur quis molestiae deserunt? Officia vitae aut maxime ipsum autem quia voluptate soluta quaerat itaque temporibus recusandae neque, sequi, illo accusantium dignissimos quibusdam blanditiis dolorem explicabo nemo totam. Adipisci labore corporis nobis illo rem recusandae, atque provident.</p>
                 <p>For exta support go to <a href="suport.html">our support page</a></p>
-                <img src="img/manHeadphone.jpg" id="mainImg">
+                <img src="img/manHeadphone.jpg" id="mainImg" alt="man walking with headpohnes with a smile.">
             </div>
         </section>
     <article class="Mega-sound-container"> <!--images for the sounds-->
@@ -37,9 +39,9 @@
             </div>
             <div class="slider-cont">
                 <div class="forest" id="forest" > 
-                    <i class="fas fa-tree fa-4x"></i> 
-                    <i class="fas fa-tree fa-4x"></i> 
-                    <i class="fas fa-tree fa-4x"></i>
+                    <ul class="fas fa-tree fa-4x"></ul> 
+                    <ul class="fas fa-tree fa-4x"></ul> 
+                    <ul class="fas fa-tree fa-4x"></ul>
                 </div>
                 <div class="slider">
                     <input type="range" min="0" max="100" value="50">
@@ -48,23 +50,48 @@
                 <div class="sliderValue"></div>
             </div>
             <div class="slider-cont">
-                <i class="fas fa-wind fa-4x" id="wind"></i>
+                <i class="fas fa-wind fa-4x" id="wind"></i> <!--wind-->
                 <div class="slider">
                     <input type="range" min="0" max="100" value="50">
                     <progress min="0" max="100" value="50"></progress>
                 </div>
+                <div class="sliderValue"></div>
             </div>
-            <i class="fas fa-water fa-4x" id="waves"></i> <!---Waves-->
-            <i class="fas fa-fire-alt fa-4x" id="fire"></i> <!--Camp fire-->
-            <i class="fab fa-envira fa-4x" id="leavsBlowinginWind"></i> <!--leavs-->
+            <div class="slider-cont">
+                <i class="fas fa-water fa-4x" id="waves"></i> <!---Waves-->
+                <div class="slider">
+                    <input type="range" min="0" max="100" value="50">
+                    <progress min="0" max="100" value="50"></progress>
+                </div>
+                <div class="sliderValue"></div>
+            </div>
+            <div class="slider-cont">
+                <i class="fas fa-fire-alt fa-4x" id="fire"></i> <!--Camp fire-->
+                <div class="slider">
+                    <input type="range" min="0" max="100" value="50">
+                    <progress min="0" max="100" value="50"></progress>
+                </div>
+                <div class="sliderValue"></div>
+            </div>
+            <div class="slider-cont">
+                <i class="fab fa-envira fa-4x" id="leavsBlowinginWind"></i> <!--leavs-->
+                <div class="slider">
+                    <input type="range" min="0" max="100" value="50">
+                    <progress min="0" max="100" value="50"></progress>
+                </div>
+                <div class="sliderValue"></div>
+            </div>
             <script>
                 window.onload = function(){
                     const sliders = document.querySelectorAll(".slider");
-                    for (const slider of sliders) {
+                    for (let i = 0; i < sliders.length; i++) {
+                        const slider = sliders[i];
                         const input = slider.querySelector('input');
                         input.oninput = function() {
                             const progressBar = slider.querySelector('progress');
                             progressBar.value = input.value;
+
+                            sounds[i].volume = progressBar.value / 100;
                         }
                     }
                 }
@@ -75,7 +102,11 @@
     <footer>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda quae unde cupiditate illo modi saepe eum quod tenetur, perferendis voluptas ex pariatur sit sunt minima nihil odit quas. Quos veritatis cum iusto voluptatibus deserunt sequi laborum dolorem voluptas? Excepturi nulla aliquid magni tenetur laudantium ea unde placeat animi reprehenderit, ut saepe cumque corporis voluptate repellendus veniam cum accusantium consequuntur aliquam. Fugiat, cupiditate ea velit animi ab enim voluptatum, sequi nobis tempora provident incidunt sapiente. Maiores repudiandae eligendi laborum, rem corporis expedita modi voluptatum accusantium, et cum labore ipsam nihil? Repellat cum quasi modi consequuntur deserunt blanditiis vitae consectetur accusamus facilis!</p>
     </footer>
-    <form action="" id="form1" class="login" style="display: none;">
+    <form action="" id="form1" class="login" style="display: none;" >
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="fa-x1" class="close-X">
+            <line x1="750" y1="10" x2="740" y2="20" stroke="black" stroke-width="2"></line>
+            <line x1="740" y1="10" x2="750" y2="20" stroke="black" stroke-width="2" />
+        </svg>
         <div class="collum">
             <p class="font">Email:</p> <input type="email"></input>
         </div>
@@ -84,6 +115,10 @@
         </div> 
     </form>
     <form action="" id="form2" class="login" style="display: none;">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="fa-x2" class="close-X">
+            <line x1="750" y1="10" x2="740" y2="20" stroke="black" stroke-width="2"></line>
+            <line x1="740" y1="10" x2="750" y2="20" stroke="black" stroke-width="2" />
+        </svg>
         <div class="collum">
             <p class="font">Email:</p> <input type="email"></input>
         </div>
@@ -91,7 +126,7 @@
             <p class="font">Password:</p>  <input type="password"></input>
         </div> 
     </form>
-    <script src="index.js"></script>
+    <script src="java/index.js"></script>
 </body>
 </html>
  
